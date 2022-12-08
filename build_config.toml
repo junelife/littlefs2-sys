@@ -1,0 +1,12 @@
+public_include_dir = "third_party/littlefs"
+public_header_files = [
+    "third_party/littlefs/lfs.h",
+]
+private_include_dirs = [
+    "third_party/littlefs",
+    "A2/system/public"
+]
+source_files = [
+    "third_party/littlefs/lfs.c",
+    "third_party/littlefs/lfs_util.c",
+]
