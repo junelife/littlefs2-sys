@@ -1,6 +1,8 @@
 use std::env;
 use std::path::PathBuf;
 
+// TODO: maybe this can all go away.  I've commented out for now so I can use it for reference.
+// I'm really not sure about how the builder should work.
 // fn main() -> Result<(), Box<dyn std::error::Error>> {
 //     let mut builder = cc::Build::new();
 //     let target = env::var("TARGET")?;
