@@ -1,9 +1,9 @@
-use build_tools::configure_toolchain;
+// use build_tools::configure_toolchain;
 use std::env;
 use std::path::PathBuf;
 
 fn main() -> Result<(), Box<dyn std::error::Error>> {
-    configure_toolchain();
+    // configure_toolchain();
 
     let mut builder = cc::Build::new();
     let target = env::var("TARGET")?;
