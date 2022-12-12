@@ -1,9 +1,13 @@
 use std::env;
 use std::path::PathBuf;
+// use build_tools::{configure_toolchain, BindingsBuilderExt, CBuildConfig};
+use build_tools::configure_toolchain;
 
 // TODO: maybe this can all go away.  I've commented out for now so I can use it for reference.
 // I'm really not sure about how the builder should work.
 fn main() -> Result<(), Box<dyn std::error::Error>> {
+    configure_toolchain();
+
     let mut builder = cc::Build::new();
     let target = env::var("TARGET")?;
     let builder = builder
@@ -37,6 +41,8 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     bindings
         .write_to_file(out_path.join("bindings.rs"))
         .expect("Couldn't write bindings!");
+
+    Ok(())
 }
 
 // fn main() {
