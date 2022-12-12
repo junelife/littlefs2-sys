@@ -15,12 +15,11 @@ cty = "0.2.1"
 [target.'cfg(target_os = "espidf")'.dependencies]
 esp-idf-sys = { version = "0.31", default-features = false, features = ["std", "binstart", "native"] }
 
-# TODO: not sure this is setup properly
-# [build-dependencies]
-# bindgen = { version = "0.56.0", default-features = false }
-# cc = "1"
 [build-dependencies]
-build-tools = { path = "common/build-tools" }
+bindgen = { version = "0.60", default-features = false }
+cc = "1"
+#  [build-dependencies]
+#  build-tools = { path = "common/build-tools" }
 
 [features]
 assertions = []
