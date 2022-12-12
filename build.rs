@@ -1,10 +1,7 @@
+use build_tools::configure_toolchain;
 use std::env;
 use std::path::PathBuf;
-// use build_tools::{configure_toolchain, BindingsBuilderExt, CBuildConfig};
-use build_tools::configure_toolchain;
 
-// TODO: maybe this can all go away.  I've commented out for now so I can use it for reference.
-// I'm really not sure about how the builder should work.
 fn main() -> Result<(), Box<dyn std::error::Error>> {
     configure_toolchain();
 
@@ -44,20 +41,3 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 
     Ok(())
 }
-
-// fn main() {
-//     build_tools::configure_toolchain();
-//
-//     let build_config = build_tools::CBuildConfig::default();
-//     build_config.c_builder().compile(build_config.name());
-//
-//     build_config
-//         .bindings_builder()
-//         .clang_arg("-Iinclude")
-//         // Blocklist functions that are not FFI-safe
-//         .blocklist_function(".*printf.*")
-//         .blocklist_function(".*scanf.*")
-//         .generate_and_write_bindings();
-//
-//     Ok(())
-// }
