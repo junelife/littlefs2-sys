@@ -16,10 +16,8 @@ cty = "0.2.1"
 esp-idf-sys = { version = "0.31", default-features = false, features = ["std", "binstart", "native"] }
 
 [build-dependencies]
-bindgen = { version = "0.60", default-features = false }
+bindgen = { version = "0.60"}
 cc = "1"
-#  build-tools = { path = "common/build-tools" }
-#  build-tools.workspace = true
 
 [features]
 assertions = []
