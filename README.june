@@ -1,0 +1,12 @@
+Updated the littlefs submodule which was tracking this:
+    (HEAD detached at 4c9146e)
+
+This is version v2.2.1 of littlefs (April 9th 2020)
+
+to another detached head:
+
+    HEAD detached at 6a53d76
+
+This is both the current head of the master branch and the official v2.5.1
+release (Nov 10th 2022).
+
