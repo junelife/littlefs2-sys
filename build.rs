@@ -10,12 +10,11 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         .flag("-DLFS_NO_WARN")
         .flag("-DLFS_NO_ERROR")
         .file("littlefs/lfs.c")
-        .file("littlefs/lfs_util.c")
-        .file("string.c");
+        .file("littlefs/lfs_util.c");
 
-    println!("cargo:rerun-if-changed=littlfs/lfs.c");
-    println!("cargo:rerun-if-changed=littlfs/lfs_util.c");
-    println!("cargo:rerun-if-changed=string.c");
+    println!("cargo:rerun-if-changed=littlefs/lfs.c");
+    println!("cargo:rerun-if-changed=littlefs/lfs_util.c");
+    println!("cargo:rerun-if-changed=littlefs/lfs_util.h");
 
     #[cfg(not(feature = "assertions"))]
     let builder = builder.flag("-DLFS_NO_ASSERT");
